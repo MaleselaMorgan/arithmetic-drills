@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drill Result</title>
+</head>
+<body>
+    <h1>Drill Result</h1>
+    <p>Your score: {{ score }}/{{ total_questions }}</p>
+    <h2>Questions and Answers:</h2>
+    <ul>
+        {% for question, _ in drills %}
+        <li>{{ question }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

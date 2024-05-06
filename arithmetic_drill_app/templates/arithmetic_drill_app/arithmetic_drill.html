@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Drill</title>
+    <link rel="stylesheet" href="{% static 'arithmetic_drill_app/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Arithmetic Drill</h1>
+        <form action="{% url 'arithmetic_drill' %}" method="post">
+            {% csrf_token %}
+            <label for="num_questions">Number of questions:</label>
+            <input type="number" id="num_questions" name="num_questions" required>
+            <label for="min_num">Minimum number:</label>
+            <input type="number" id="min_num" name="min_num" required>
+            <label for="max_num">Maximum number:</label>
+            <input type="number" id="max_num" name="max_num" required>
+            <button type="submit">Start Drill</button>
+        </form>
+    </div>
+</body>
+</html>
